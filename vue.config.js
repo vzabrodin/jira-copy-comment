@@ -1,5 +1,30 @@
 module.exports = {
   transpileDependencies: [
     'vuetify'
-  ]
+  ],
+
+  pages: {
+    options: {
+      template: 'public/browser-extension.html',
+      entry: './src/options/main.js',
+      title: 'Options'
+    }
+  },
+
+  pluginOptions: {
+    browserExtension: {
+      componentOptions: {
+        background: {
+          entry: 'src/background.js'
+        },
+        contentScripts: {
+          entries: {
+            'content-script': [
+              'src/content-scripts/content-script.js'
+            ]
+          }
+        }
+      }
+    }
+  }
 }
