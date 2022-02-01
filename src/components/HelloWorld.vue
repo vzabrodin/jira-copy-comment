@@ -1,7 +1,6 @@
-<template>
-  <div>
-    <p>{{ defaultText }}</p>
-  </div>
+<template lang="pug">
+div
+  p {{ defaultText }}
 </template>
 
 <script>
