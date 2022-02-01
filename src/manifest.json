@@ -2,10 +2,12 @@
   "manifest_version": 2,
   "name": "__MSG_extName__",
   "homepage_url": "http://localhost:8080/",
-  "description": "A Vue Browser Extension",
+  "description": "Creates a button to copy text from JIRA's issue page",
   "default_locale": "en",
   "permissions": [
     "activeTab",
+    "webNavigation",
+    "storage",
     "<all_urls>",
     "*://*/*"
   ],
@@ -18,7 +20,7 @@
     "scripts": [
       "js/background.js"
     ],
-    "persistent": false
+    "persistent": true
   },
   "browser_action": {
     "default_title": "__MSG_extName__",
