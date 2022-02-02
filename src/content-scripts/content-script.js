@@ -50,7 +50,7 @@ function getJiraIssueInfo () {
   const fixVersions = [...document.querySelectorAll('#fixVersions-field > a')]
     .map((element) => element.innerText)
     .sort()
-    .join('')
+    .join(', ')
 
   const [, parentIssueKey, parentIssueSummary] =
     document
